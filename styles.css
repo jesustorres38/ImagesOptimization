@@ -1,0 +1,50 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+}
+
+.header {
+  color: #FFFFFF;
+  background-color: #001f3f;
+  height: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.header h1 {
+  font-size: 1em;
+}
+
+.content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: #0074D9;
+  }
+  .header h1 {
+    font-size: 2em;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+  .header {
+    background-color: #7FDBFF;
+  }
+  .header h1 {
+    font-size: 4em;
+  }
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+}

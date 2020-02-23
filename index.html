@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Images optimization example!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>Images optimization example!</h1>
+    <h2>Srset & Sizes Image Attribute</h2>
+  </header>
+  <section class="content">
+    <!-- Images Go Here -->
+
+    <h1>srcset Attribute - Device Pixel Density Example:</h1>
+    <img src="images/tibidabo_1x.jpg" 
+    srcset="images/tibidabo_1x.jpg 1x, 
+            images/tibidabo_2x.jpg 2x" 
+    alt="Tibidabo church!">
+
+    <h1>srcset Attribute - W Example</h1>
+    <img src="images/tibidabo_3872.jpg"
+      srcset="images/tibidabo_311.jpg 600w, 
+              images/tibidabo_1280.jpg 1280w, 
+              images/tibidabo_1920.jpg 1920w,
+              images/tibidabo_3872.jpg 3872w"
+      alt="Tibidabo church!">
+
+    <h1>sizes Attribute Example</h1>
+    <img src="images/tibidabo_1280.jpg"
+      srcset="images/tibidabo_311.jpg 600w,
+              images/tibidabo_1280.jpg 1280w,
+              images/tibidabo_1920.jpg 1920w,
+              images/tibidabo_3872.jpg 3872w"
+      sizes="(min-width: 1024px) 3000px, (min-width: 768px) and (max-width: 1024px) 1500px" 
+      alt="Tibidabo church!">
+
+    <h1>Picture tag (not for ei11 )</h1>
+    <picture>
+      <source srcset="images/tibidabo_311.jpg"  media="(max-width: 600px)">
+      <source srcset="images/tibidabo_1280.jpg" media="(max-width: 1200px)">
+      <source srcset="images/tibidabo_1920.jpg" media="(max-width: 2000px)">
+      <source srcset="images/tibidabo_3872.jpg" media="(min-width: 2001px)">
+      <img srcset="images/tibidabo_1280.jpg" alt="Tibidabo church!">
+    </picture>
+
+  </section>
+</body>
+
+</html>
